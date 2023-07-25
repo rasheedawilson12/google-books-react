@@ -20,17 +20,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <input
-        type="text"
-        placeholder="Enter You Book Name"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        onKeyDown={searchBook}
-      />
-      <input type="submit" value="Submit" />
-
-      <Card book={bookData} />
+      <div className="Header">
+        <h1>Google Books API Search</h1>
+        <input
+          type="text"
+          placeholder="Enter You Book Name"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={searchBook}
+        />
+        <input type="submit" value="Submit" />
+      </div>
+      <div className="CardContainer">
+        <Card book={bookData} />
+      </div>
     </div>
   );
 }
