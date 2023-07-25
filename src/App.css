@@ -48,3 +48,10 @@ button:hover {
   filter: hue-rotate(250deg);
   cursor: pointer;
 }
+
+input {
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 8px;
+  border: 1px solid black;
+}

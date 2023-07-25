@@ -11,7 +11,9 @@ function App() {
     if (event.key === "Enter") {
       axios
         .get(
-          " https://www.googleapis.com/books/v1/volumes?q={search}&key=AIzaSyChfO8N88rZ9fOqQY9QQFwu_Zlwkmb4Mek&maxResults=40"
+          " https://www.googleapis.com/books/v1/volumes?q=" +
+            search +
+            "&key=AIzaSyChfO8N88rZ9fOqQY9QQFwu_Zlwkmb4Mek&maxResults=40"
         )
         .then((res) => setBookData(res.data.items))
         .catch((error) => console.log(error));
@@ -21,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="Header">
-        <h1>Google Books API Search</h1>
+        <h1> 📚 Google Books API Search 📚</h1>
         <input
           type="text"
           placeholder="Enter You Book Name"
